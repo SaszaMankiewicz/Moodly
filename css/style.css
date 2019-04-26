@@ -1,0 +1,251 @@
+/* font-family: 'Raleway', sans-serif;
+font-family: 'PT Sans', sans-serif; */
+
+
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+ul {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1;
+  list-style: none;
+}
+
+h1 {
+  font-size: 120px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+
+p {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+}
+
+/* HEADER */
+
+.menu .hamburger {
+  display: none;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  padding: 25px 30px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #191367;
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+.menu li a:hover {
+  color: #3f59de;
+}
+
+.header-box {
+  height: 60vh;
+  position: relative;
+  background: url("../assets/bench-accounting-49025-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.header-box::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(53, 73, 192, 0.8);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.header-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.header-text h1 {
+  color: white;
+  margin: 0;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+
+.header-text .under {
+  font-size: 16px;
+  position: absolute;
+  bottom: -10px;
+  left: 8px;
+}
+
+/* SECTION ABOUT & FEATURES */
+
+.about {
+  padding: 60px 20px;
+}
+
+.about h2 {
+  color: #3f59de;
+  padding-bottom: 40px;
+}
+
+.about p {
+  color: #171f51;
+  line-height: 1.5;
+}
+
+
+/* SECTION FEATURES */
+
+.features {
+  padding: 60px 20px;
+  background-color: #3f59de;
+}
+
+.features h2 {
+  color: #ffffff;
+  padding-bottom: 40px;
+}
+
+.features p {
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+button {
+  margin: 60px 20px 10px 20px;
+  width: 100%;
+  border: 3px solid white;
+  background-color: #3f59de;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: white;
+  padding: 15px 0;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #3550d4;
+}
+
+
+/* MEDIA QUERIES */
+
+@media(max-width: 768px) {
+
+  .menu li a {
+    font-size: 11px;
+  }
+
+  .header-box {
+    height: 30vh;
+    background-position: center;
+  }
+
+  .header-text h1 {
+    font-size: 95px;
+  }
+
+  .header-text .under {
+    font-size: 12px;
+    bottom: -8px;
+    left: 4px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
+
+  @media(max-width: 576px) {
+    .menu .hamburger {
+      display: block;
+      height: 60px;
+    }
+
+    .menu .hamburger img {
+      width: 13%;
+      top: 13px;
+      position: absolute;
+      padding-left: 30px;
+      right: 20px;
+    }
+
+    .menu ul {
+      display: none;
+    }
+
+    .header-text h1 {
+      font-size: 75px;
+    }
+
+    .header-text .under {
+      font-size: 10px;
+      bottom: -6px;
+      left: -17px;
+    }
+  }
+
+  @media(max-width: 368px) {
+
+    .header-text h1 {
+      font-size: 50px;
+    }
+
+    .header-text .under {
+      bottom: -16px;
+      left: -6px;
+    }
+
+    .about h2,
+    .features h2 {
+      font-size: 28px;
+    }
+
+    .about p,
+    .features p {
+      font-size: 14px;
+    }
+
+    button {
+      margin: 40px 20px 0 20px;
+      font-size: 18px;
+
+    }
+  }
+}
